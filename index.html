@@ -2,64 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello D3</title>
-    <script type="text/javascript" src="node_modules/d3/build/d3.js"></script>
-    <style type="text/css">
-        div.bar {
-            display: inline-block;
-            width: 20px;
-            height:75px;
-            background-color: teal;
-            margin-right: 2px;
-        }
-    </style>
+    <title>Bookwerx Reporting</title>
 </head>
 <body>
-    <script type="text/javascript">
-
-        var w = 500
-        var h = 110
-
-        function plot(svg, sw, hh, rect, rw, rh, x, y) {
-            y1 = (h - y - rh)
-            rect.attr("x",x)
-            rect.attr("y",y1)
-        }
-
-        var svg = d3.select("body").append("svg")
-        svg.attr("width", w)
-        svg.attr("height", h)
-
-
-        rect1 = svg.append("rect")
-        rect1.attr("height",20)
-        rect1.attr("width",40)
-        rect1.attr("fill", "red")
-
-        plot(svg, w, h, rect1, 20, 40, 0, 0)
-
-        rect2 = svg.append("rect")
-        rect2.attr("height",20)
-        rect2.attr("width",40)
-        plot(svg, w, h, rect2, 20, 40, 0, 30)
-
-
-
-        rect11 = svg.append("rect")
-        rect11.attr("height",30)
-        rect11.attr("width",40)
-        rect11.attr("fill", "red")
-
-        plot(svg, w, h, rect11, 20, 40, 50, 0)
-
-        rect21 = svg.append("rect")
-        rect21.attr("height",40)
-        rect21.attr("width",40)
-        plot(svg, w, h, rect21, 20, 40, 50, 40)
-
-
-
-
-    </script>
+<section id="bookwerx-reporting"></section>
 </body>
+<script src="./bundle.js"></script>
 </html>

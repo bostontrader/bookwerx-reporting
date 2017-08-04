@@ -1,28 +1,50 @@
 {
-  "name": "bookwerx-reporting",
-  "version": "0.1.0",
+  "author": {
+    "name": "Thomas Radloff",
+    "email": "bostontrader@gmail.com",
+    "url": "https://github.com/bostontrader"
+  },
+  "ava": {
+    "require": [
+      "babel-register",
+      "./ignore-utils"
+    ],
+    "babel": "inherit"
+  },
+  "bugs": {
+    "url": "https://github.com/bostontrader/bookwerx-reporting/issues"
+  },
+  "dependencies": {
+    "bulma": "^0.5.0",
+    "d3": "4.2.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
   "description": "An example reporting module that extracts information from a bookwerx-core server and uses D3 to produce a variety of reports. ",
+  "homepage": "https://github.com/bostontrader/bookwerx-reporting#readme",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bostontrader/bookwerx-reporting.git"
-  },
   "keywords": [
-    "bookwerx-core",
+    "bookwerx",
     "multi",
     "currency",
     "d3"
   ],
-  "author": "Thomas Radloff (https://github.com/bostontrader)",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bostontrader/bookwerx-reporting/issues"
+  "name": "bookwerx-reporting",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bostontrader/bookwerx-reporting.git"
   },
-  "homepage": "https://github.com/bostontrader/bookwerx-reporting#readme",
-  "dependencies": {
-    "d3": "4.2.2"
+  "scripts": {
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --host 0.0.0.0 --port 8081",
+    "test": "nyc ava '**/*.test.js'"
+  },
+  "version": "0.2.0",
+  "devDependencies": {
+    "ava": "^0.21.0",
+    "babel-loader": "^7.1.1",
+    "nyc": "^11.1.0",
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
   }
 }
